@@ -59,12 +59,13 @@ class _HomeState extends State<Home> {
     loc=LatLng(temp.latitude!,temp.longitude!);
     print('inside location init');
     flag=true;
-    setState(() async{
-   GoogleMapController gc=await _mapConroller.future;
+    GoogleMapController gc=await _mapConroller.future;
 
-      gc.animateCamera(CameraUpdate.newCameraPosition(
-          CameraPosition(target:loc,zoom:15.0 )
-      ));
+    gc.animateCamera(CameraUpdate.newCameraPosition(
+        CameraPosition(target:loc,zoom:15.0 )
+    ));
+    setState(() async{
+
 
     });
     print("${loc.latitude} ${loc.longitude}");
@@ -186,6 +187,7 @@ setState(() {
     ui.FrameInfo fi = await codec.getNextFrame();
     return (await fi.image.toByteData(format: ui.ImageByteFormat.png))!.buffer.asUint8List();
   }
+  int tempTotal=0;
 
   @override
   Widget build(BuildContext context) {
@@ -213,8 +215,17 @@ setState(() {
       // var i= snapshot.data['totalCollected'];
       // var j=data['totalCollected'];
       print('snapshot dats ...');
+
+      if(tempTotal!=data['totalRequest'])
+        getStats2();
+
+      // print(tempTotal);
+    tempTotal=data['totalRequest'];
+
+
       // print(snapshot.data!);
       // print();
+
       return Text("Total collected : ${data['totalCollected']}/${data['totalRequest'] }",style: TextStyle(
         fontSize: 20,
         fontStyle: FontStyle.italic,
