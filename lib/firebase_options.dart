@@ -50,20 +50,20 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyBvnVoGeAMT8KbtwQgMBbX1siC4jzO_ZB0',
-    appId: '1:170858717041:android:e79fef7f247573d58860d0',
-    messagingSenderId: '170858717041',
-    projectId: 'hgarbage-9a419',
-    storageBucket: 'hgarbage-9a419.appspot.com',
+    apiKey: 'AIzaSyB9_gJe43ukzF57KMCmrijFjKc5PiUWHt4',
+    appId: '1:14229056069:android:94fd4fc93c9bbe9c30d12c',
+    messagingSenderId: '14229056069',
+    projectId: 'greenage-62a5d',
+    storageBucket: 'greenage-62a5d.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyCcyNraj37eo--Km-k7q2Sv6F5Ve6d62F8',
-    appId: '1:170858717041:ios:46385cd70a945ed78860d0',
-    messagingSenderId: '170858717041',
-    projectId: 'hgarbage-9a419',
-    storageBucket: 'hgarbage-9a419.appspot.com',
-    iosClientId: '170858717041-i8nlfeovs3pted05t57onm37khis0f72.apps.googleusercontent.com',
+    apiKey: 'AIzaSyD4HzO53Era7SRZcWMphRlXuJcvA1UjaAc',
+    appId: '1:14229056069:ios:0c39bf79963f293030d12c',
+    messagingSenderId: '14229056069',
+    projectId: 'greenage-62a5d',
+    storageBucket: 'greenage-62a5d.appspot.com',
+    iosClientId: '14229056069-orjshbd8fbkkq5ic03vlnenmcvn9l6eo.apps.googleusercontent.com',
     iosBundleId: 'com.example.gdriver',
   );
 }
